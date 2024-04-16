@@ -21,5 +21,5 @@ export default {
       dest: path.join(__dirname, 'dist', '~partytown')
     })
   ],
-  
+  assetsInclude: ['**/*.hdr', '**/*.glb', '**/*.gltf']
 };

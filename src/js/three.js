@@ -6,6 +6,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 
 import fragment from '../shaders/fragment.glsl';
 import vertex from '../shaders/vertex.glsl';
+import model from '../assets/player2.glb'
 
 const device = {
   width: window.innerWidth,
@@ -157,7 +158,7 @@ export default class Three {
     //   this.player.position.y = -50;
     // });
 
-    this.loader.load('src/assets/player2.glb', (glb) => {
+    this.loader.load(model, (glb) => {
       console.log(glb.scene)
       spine = glb.scene.children[0].children[0].children[0].children[0].children[1].children[0].children[0].children[0].children[0]
       glb.scene.traverse((child) => {
